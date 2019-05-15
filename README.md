@@ -87,7 +87,7 @@ NOTE: It can be useful to name lambda functions, DynamoDB tables, S3 buckets, et
 Example: `arn:aws:lambda:us-east-1:000000000000:function:myorg-enterprise-voiceapp-prod`
 
 
-If the `skillId` in `project.js` is not automatically updated for the proper stage when you run `jovo deploy`, then manually update the `skillId`.
+After running the `jovo deploy` command for a stage, copy the `skillId` value from `platforms/alexaSkill/.ask/config` and set the `skillId` for the corresponding stage in `project.js`.
 
 When you build a project, the `skillId` for the specified stage is set in the `platforms/alexaSkill/.ask/config` file.
 
@@ -216,8 +216,12 @@ The `.env` file should not be checked in to the repo. That is why it is included
 ## i18n
 Translations for each language are included in files under the `i18n` folder. The `config.js` file includes configuration settings for translations.
 
+## skill.json
+The first time you run `jovo build` for an Alexa skill, a `skill.json` file will be created under the `platforms/alexaSkill` folder.
 
+You can make changes to the `skill.json` file but they could be overwritten when values in the `project.js` file are merged with it. Always build and then review the file to make sure it is correct.
 
+One value that you will likely need to change is the `category` that the skill will appear as in the Skill Store. You can find a list of values in the [Category enumeration](https://developer.amazon.com/docs/smapi/skill-manifest.html#category-enum) docs.
 
 # Quick Commands
 
@@ -228,6 +232,13 @@ $ jovo build --stage local
 
 $ jovo build -p alexaSkill --stage local
 $ jovo build --platform alexaSkill --stage local
+
+## deploy options
+$ jovo deploy --stage dev
+
+$ jovo deploy -p alexaSkill --stage dev
+$ jovo deploy -p alexaSkill --stage dev -t info
+$ jovo deploy -p alexaSkill --stage dev -t model
 
 ## run
 $ jovo run
