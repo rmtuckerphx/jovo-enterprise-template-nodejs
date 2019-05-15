@@ -1,0 +1,216 @@
+{
+	"invocation": "my test app",
+	"intents": [
+		{
+			"name": "HelloWorldIntent",
+			"phrases": [
+				"hello",
+				"say hello",
+				"say hello world"
+			]
+		},
+		{
+			"name": "MyNameIsIntent",
+			"phrases": [
+				"{name}",
+				"my name is {name}",
+				"i am {name}",
+				"you can call me {name}"
+			],
+			"inputs": [
+				{
+					"name": "name",
+					"type": {
+						"alexa": "AMAZON.US_FIRST_NAME",
+						"dialogflow": "@sys.given-name"
+					}
+				}
+			]
+		},
+		{
+			"name": "HelpIntent",
+			"alexa": {
+				"name": "AMAZON.HelpIntent"
+			},
+			"phrases": [
+				"what can i do",
+				"help"
+			]
+		},
+		{
+			"name": "CancelIntent",
+			"phrases": [
+				"cancel",
+				"never mind",
+				"forget it"
+			],
+			"alexa": {
+				"name": "AMAZON.CancelIntent"
+			},
+			"dialogflow": {
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "actions_intent_CANCEL"
+					}
+				]
+			}
+		},
+		{
+			"name": "StopIntent",
+			"alexa": {
+				"name": "AMAZON.StopIntent"
+			},
+			"phrases": [
+				"stop",
+				"off",
+				"shut up",
+				"stop the search",
+				"stop search",
+				"stop it"
+			]
+		},
+		{
+			"name": "GoodbyeIntent",
+			"phrases": [
+				"good bye",
+				"goodbye",
+				"see you later"
+			]
+		},
+		{
+			"name": "YesIntent",
+			"alexa": {
+				"name": "AMAZON.YesIntent"
+			},
+			"phrases": [
+				"sure",
+				"yes",
+				"confirm",
+				"absolutely",
+				"yes please",
+				"ah yes",
+				"yep",
+				"yes continue",
+				"ah sure",
+				"correct"
+			]
+		},
+		{
+			"name": "NoIntent",
+			"alexa": {
+				"name": "AMAZON.NoIntent"
+			},
+			"phrases": [
+				"no",
+				"no way",
+				"no thanks",
+				"no thank you",
+				"nope",
+				"forget it",
+				"forget about it",
+				"heck no",
+				"wrong"
+			]
+		},
+		{
+			"name": "RepeatIntent",
+			"alexa": {
+				"name": "AMAZON.RepeatIntent"
+			},
+			"phrases": [
+				"repeat"
+			]
+		},
+		{
+			"name": "VersionIntent",
+			"phrases": [
+				"version",
+				"the version",
+				"app version",
+				"the skill version",
+				"what is the skill version",
+				"version number",
+				"what's the version",
+				"what is the version",
+				"what is the app version",
+				"tell me the version",
+				"what's the version number",
+				"which version is this",
+				"skill version"
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.NavigateHomeIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.NavigateSettingsIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.NextIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.PageUpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.PageDownIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.PreviousIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.ScrollRightIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.ScrollDownIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.ScrollLeftIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.ScrollUpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.FallbackIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}

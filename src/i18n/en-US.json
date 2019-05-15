@@ -1,0 +1,60 @@
+{
+    "translation": {
+        "WelcomeFirst": {
+            "speech": "Welcome to the Jovo Enterprise template.",
+            "prompt": "What's your name?",
+            "reprompt": "Please tell me your name."
+        },
+        "WelcomeBack": {
+            "speech": [
+                "Welcome back to the Enterprise template.",
+                "Good to speak with you again."
+            ]
+        },
+        "Goodbye": {
+            "speech": [
+                "Good bye.",
+                "Take care.",
+                "Come back soon."
+            ]
+        },
+        "Help": {
+            "speech": "This template is a sample of a more complex skill that you would use in an enterprise scenario. I can say back your name, tell you the app version, repeat, and more."
+        },
+        "Fallback": {
+            "speech": [
+                "Sorry, I am not able to help you with that.",
+                "That is not something I can help with."
+            ]
+        },
+        "Version": {
+            "speech": "The app version is {{version}} {{stage}}.",
+            "reprompt": "For a list of options, say 'help'. To end, say: goodbye."
+        },
+        "HelloWorld": {
+            "speech": "Hello World!",
+            "prompt": [
+                "Please tell me your name.",
+                "What's your name?"
+            ],
+            "reprompt": [
+                "Please tell me your name.",
+                "What is your name?"
+            ]
+        },
+        "MyNameIs": {
+            "speech": [
+                "Hey {{name}}, nice to meet you.",
+                "Well, hello there {{name}}."
+            ]
+        },
+        "WhatNext": {
+            "reprompt": [
+                "What do you want to do now?",
+                "What next?",
+                "What do you want to do?",
+                "How can I help?"
+            ]
+        }
+    }
+}
