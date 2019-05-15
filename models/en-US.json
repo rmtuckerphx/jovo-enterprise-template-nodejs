@@ -79,6 +79,18 @@
 			]
 		},
 		{
+			"name": "StartOverIntent",
+			"alexa": {
+				"name": "AMAZON.StartOverIntent"
+			},
+			"phrases": [
+				"start over",
+				"restart",
+				"start again",
+				"start a new search"
+			]
+		},
+		{
 			"name": "YesIntent",
 			"alexa": {
 				"name": "AMAZON.YesIntent"

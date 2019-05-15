@@ -6,6 +6,7 @@
   "dependencies": {
     "console-log-level": "^1.4.1",
     "dotenv": "^8.0.0",
+    "jovo-analytics-dashbot": "^2.2.3",
     "jovo-db-dynamodb": "^2.2.3",
     "jovo-db-filedb": "^2.0.2",
     "jovo-framework": "^2.2.5",

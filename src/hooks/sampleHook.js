@@ -1,7 +1,7 @@
 'use strict';
 
 const hook = (error, host, jovo) => {
-    jovo.log.error('sampleHook');
+    jovo.log.info('sampleHook called');
 };
 
 module.exports = hook;
