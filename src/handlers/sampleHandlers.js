@@ -12,11 +12,6 @@ const handlers = {
       'HelloWorld.prompt',
       'HelloWorld.reprompt'
     );
-
-    // this.ask(
-    //   this.$speech.t('HelloWorld.speech'),
-    //   this.$reprompt.t('WhatNext.reprompt')
-    // );
   },
 
   MyNameIsIntent() {
@@ -33,11 +28,6 @@ const handlers = {
       'WhatNext.reprompt',
       translationData
     );
-
-    // this.ask(
-    //   this.$speech.t('MyNameIs.speech', translationData),
-    //   this.$reprompt.t('WhatNext.reprompt')
-    // );
   },
 };
 

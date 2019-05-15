@@ -20,11 +20,6 @@ const handlers = {
       stage: process.env.STAGE,
     };
 
-    // this.ask(
-    //     this.$speech.t('Version.speech', translationData),
-    //     this.$reprompt.t('Version.reprompt')
-    // );
-
     processSpeech.call(
       this,
       'Version.speech',

@@ -36,11 +36,6 @@ const handlers = {
       'WelcomeFirst.prompt',
       'WelcomeFirst.reprompt'
     );
-
-    // this.ask(
-    //   this.$speech.t('WelcomeFirst.speech'),
-    //   this.$reprompt.t('WelcomeFirst.reprompt')
-    // );
   },
 
   PrivateWelcomeBack() {
@@ -52,11 +47,6 @@ const handlers = {
       'WhatNext.reprompt',
       'WhatNext.reprompt'
     );
-
-    // this.ask(
-    //   this.$speech.t('WelcomeBack.speech'),
-    //   this.$reprompt.t('WhatNext.reprompt')
-    // );
   },
 
   StopCancelIntent() {
@@ -89,11 +79,6 @@ const handlers = {
       'WhatNext.reprompt',
       'WhatNext.reprompt'
     );
-
-    // this.ask(
-    //   this.$speech.t('Help.speech'),
-    //   this.$reprompt.t('WhatNext.reprompt')
-    // );
   },
 
   RepeatIntent() {
@@ -115,11 +100,6 @@ const handlers = {
       'WhatNext.reprompt',
       'WhatNext.reprompt'
     );
-
-    // this.ask(
-    //   this.$speech.t('Fallback.speech'),
-    //   this.$reprompt.t('WhatNext.reprompt')
-    // );
   },
 
   Unhandled() {
