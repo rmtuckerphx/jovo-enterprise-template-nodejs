@@ -1,7 +1,5 @@
 'use strict';
 
-const { processSpeech } = require('../util/speechHelper');
-
 const handlers = {
   NEW_USER() {
     this.log.info('coreHandlers ---> NEW_USER');
@@ -30,8 +28,7 @@ const handlers = {
   PrivateWelcomeFirst() {
     this.log.info('coreHandlers ---> PrivateWelcomeFirst');
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'WelcomeFirst.speech',
       'WelcomeFirst.prompt',
       'WelcomeFirst.reprompt'
@@ -41,8 +38,7 @@ const handlers = {
   PrivateWelcomeBack() {
     this.log.info('coreHandlers ---> PrivateWelcomeBack');
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'WelcomeBack.speech',
       'WhatNext.reprompt',
       'WhatNext.reprompt'
@@ -73,12 +69,7 @@ const handlers = {
   HelpIntent() {
     this.log.info('coreHandlers ---> HelpIntent');
 
-    processSpeech.call(
-      this,
-      'Help.speech',
-      'WhatNext.reprompt',
-      'WhatNext.reprompt'
-    );
+    this.processSpeech('Help.speech', 'WhatNext.reprompt', 'WhatNext.reprompt');
   },
 
   RepeatIntent() {
@@ -94,8 +85,7 @@ const handlers = {
   FallbackIntent() {
     this.log.info('coreHandlers ---> FallbackIntent');
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'Fallback.speech',
       'WhatNext.reprompt',
       'WhatNext.reprompt'

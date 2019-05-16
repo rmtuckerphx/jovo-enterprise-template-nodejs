@@ -1,3 +1,5 @@
+'use strict';
+
 function processSpeech(speechKey, promptKey, repromptKey, translationData) {
   const data = translationData || {};
 
@@ -16,4 +18,4 @@ function processSpeech(speechKey, promptKey, repromptKey, translationData) {
   }
 }
 
-module.exports.processSpeech = processSpeech;
+module.exports = processSpeech;

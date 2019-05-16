@@ -4,6 +4,7 @@
 // APP INITIALIZATION
 // ------------------------------------------------------------------
 
+const { Jovo } = require('jovo-core');
 const { App } = require('jovo-framework');
 const { Alexa } = require('jovo-platform-alexa');
 const { GoogleAssistant } = require('jovo-platform-googleassistant');
@@ -30,10 +31,17 @@ if (process.env.STAGE === STAGES.LOCAL) {
 app.use(new Alexa(), new GoogleAssistant(), new JovoDebugger());
 
 // ------------------------------------------------------------------
+// JOVO EXTENSIONS
+// ------------------------------------------------------------------
+
+Jovo.prototype.log = require('./jovo-ext/log.js');
+Jovo.prototype.processSpeech = require('./jovo-ext/processSpeech.js');
+
+// ------------------------------------------------------------------
 // HOOKS
 // ------------------------------------------------------------------
-app.hook('after.platform.init', require('./hooks/logHook.js'));
-app.hook('after.platform.init', require('./hooks/sampleHook.js'));
+//
+// app.hook('after.platform.init', require('./hooks/sampleHook.js'));
 
 // ------------------------------------------------------------------
 // APP LOGIC
@@ -43,7 +51,6 @@ app.setHandler(
   require('./handlers/coreHandlers.js'),
   require('./handlers/versionHandlers.js'),
   require('./handlers/sampleHandlers.js')
-
   // add additional handlers here
 );
 

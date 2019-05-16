@@ -4,7 +4,12 @@
 
 module.exports = {
   alexaSkill: {
-    nlu: 'alexa',
+    nlu: {
+      name: 'alexa',
+      lang: {
+        en: ['en-US'],
+      },
+    },
     manifest: {
       apis: {
         custom: {
@@ -106,7 +111,10 @@ module.exports = {
     },
   },
   googleAction: {
-    nlu: 'dialogflow',
+    nlu: {
+      name: 'dialogflow',
+      version: 2,
+    },
   },
   stages: {
     local: {

@@ -1,13 +1,10 @@
 'use strict';
 
-const { processSpeech } = require('../util/speechHelper');
-
 const handlers = {
   HelloWorldIntent() {
     this.log.info('sampleHandlers ---> HelloWorldIntent');
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'HelloWorld.speech',
       'HelloWorld.prompt',
       'HelloWorld.reprompt'
@@ -21,8 +18,7 @@ const handlers = {
       name: this.$inputs.name.value,
     };
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'MyNameIs.speech',
       'WhatNext.reprompt',
       'WhatNext.reprompt',

@@ -1,7 +1,6 @@
 'use strict';
 
 const { STAGES } = require('../util/constants');
-const { processSpeech } = require('../util/speechHelper');
 
 const handlers = {
   VersionIntent() {
@@ -20,8 +19,7 @@ const handlers = {
       stage: process.env.STAGE,
     };
 
-    processSpeech.call(
-      this,
+    this.processSpeech(
       'Version.speech',
       'WhatNext.reprompt',
       'Version.reprompt',
