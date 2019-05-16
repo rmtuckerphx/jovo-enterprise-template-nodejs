@@ -49,6 +49,7 @@ Jovo.prototype.processSpeech = require('./jovo-ext/processSpeech.js');
 
 app.setHandler(
   require('./handlers/coreHandlers.js'),
+  require('./handlers/skillEventHandlers.js'),
   require('./handlers/versionHandlers.js'),
   require('./handlers/sampleHandlers.js')
   // add additional handlers here

@@ -97,15 +97,18 @@ module.exports = {
           {
             eventName: 'SKILL_DISABLED',
           },
-          {
-            eventName: 'SKILL_PERMISSION_ACCEPTED',
-          },
-          {
-            eventName: 'SKILL_PERMISSION_CHANGED',
-          },
-          {
-            eventName: 'SKILL_ACCOUNT_LINKED',
-          },
+          // {
+          //   eventName: 'SKILL_PERMISSION_ACCEPTED',
+          // },
+          // {
+          //   eventName: 'SKILL_PERMISSION_CHANGED',
+          // },
+          // {
+          //   eventName: 'SKILL_ACCOUNT_LINKED',
+          // },
+          // {
+          //   eventName: 'SKILL_PROACTIVE_SUBSCRIPTION_CHANGED',
+          // },
         ],
       },
     },
