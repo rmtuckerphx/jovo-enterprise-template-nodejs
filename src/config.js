@@ -30,15 +30,18 @@ module.exports = {
       enabled: false,
     },
     DynamoDb: {
+      enabled: false,
       tableName: `${process.env.DYNAMODB_USERS_TABLE}`,
     },
   },
 
   analytics: {
     DashbotAlexa: {
+      enabled: false,
       key: `${process.env.DASHBOT_KEY_ALEXA}`,
     },
     DashbotGoogleAssistant: {
+      enabled: false,
       key: `${process.env.DASHBOT_KEY_GOOGLE}`,
     },
   },

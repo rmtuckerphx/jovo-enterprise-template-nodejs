@@ -6,23 +6,10 @@
 require('dotenv').config();
 
 module.exports = {
-
-    db: {
-        FileDb: {
-            enabled: true,
-            pathToFile: '../db/db.json',
-        },
-        DynamoDb: {
-            enabled: false,
-        },
+  db: {
+    FileDb: {
+      enabled: true,
+      pathToFile: '../db/db.json',
     },
-
-    analytics: {
-        DashbotAlexa: {
-            enabled: false,
-        },
-        DashbotGoogleAssistant: {
-            enabled: false,
-        },
-    },
+  },
 };

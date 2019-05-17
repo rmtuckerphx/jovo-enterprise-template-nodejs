@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------
 
 module.exports = {
+  db: {
+    DynamoDb: {
+      enabled: true,
+    },
+  },
+
   analytics: {
     DashbotAlexa: {
-      key: `${process.env.DASHBOT_KEY_ALEXA}`,
+      enabled: true,
     },
     DashbotGoogleAssistant: {
-      key: `${process.env.DASHBOT_KEY_GOOGLE}`,
+      enabled: true,
     },
   },
 };

@@ -6,13 +6,13 @@
   "dependencies": {
     "console-log-level": "^1.4.1",
     "dotenv": "^8.0.0",
-    "jovo-analytics-dashbot": "^2.2.3",
-    "jovo-db-dynamodb": "^2.2.3",
-    "jovo-db-filedb": "^2.0.2",
-    "jovo-framework": "^2.2.5",
-    "jovo-platform-alexa": "^2.0.2",
-    "jovo-platform-googleassistant": "^2.0.2",
-    "jovo-plugin-debugger": "^2.0.2"
+    "jovo-analytics-dashbot": "^2.2.4",
+    "jovo-db-dynamodb": "^2.2.4",
+    "jovo-db-filedb": "^2.2.4",
+    "jovo-framework": "^2.2.6",
+    "jovo-platform-alexa": "^2.2.8",
+    "jovo-platform-googleassistant": "^2.2.6",
+    "jovo-plugin-debugger": "^2.2.5"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
